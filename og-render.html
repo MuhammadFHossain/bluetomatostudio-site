@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>og render — 1200×630</title>
+<!--
+  Not a page of the site. This is the source for assets/img/og.png, the picture
+  that shows up when someone pastes a bluetomatostudio.com link into a message.
+  To rebuild it, see the "Rebuilding the pictures" part of README.md.
+-->
+<style>
+  @font-face {
+    font-family: "Fraunces";
+    src: url("assets/fonts/Fraunces-VF.woff2") format("woff2");
+    font-weight: 300 650; font-style: normal;
+  }
+  * { box-sizing: border-box; margin: 0; }
+  body {
+    width: 1200px; height: 630px; overflow: hidden;
+    background: #FBFAF7;
+    color: #191C24;
+    font-family: -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+    display: flex; flex-direction: column; justify-content: center;
+    padding: 0 88px;
+    position: relative;
+  }
+  body::before {
+    content: ""; position: absolute; inset: -180px -200px auto auto;
+    width: 760px; height: 760px; border-radius: 50%;
+    background: radial-gradient(circle, rgba(200,69,44,.13), transparent 68%);
+  }
+  .inner { position: relative; }
+  .brand { display: flex; align-items: center; gap: 16px; margin-bottom: 40px; }
+  .brand svg { width: 46px; height: 46px; }
+  .brand b { font-family: "Fraunces", Georgia, serif; font-size: 30px; font-weight: 600; letter-spacing: -.02em; }
+  h1 {
+    font-family: "Fraunces", Georgia, serif;
+    font-size: 76px; font-weight: 560; line-height: 1.06; letter-spacing: -.022em;
+    max-width: 15ch;
+  }
+  h1 .soft { color: #6E727D; }
+  p { font-size: 26px; color: #565B66; margin-top: 26px; max-width: 40ch; }
+  .icons { display: flex; gap: 16px; margin-top: 46px; }
+  .icons span {
+    width: 84px; height: 84px; border-radius: 22.4%; overflow: hidden;
+    box-shadow: 0 2px 8px rgba(25,28,36,.12), inset 0 0 0 1px rgba(0,0,0,.06);
+  }
+  .icons span.plain { box-shadow: none; }
+  .icons img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .icons img.up { transform: scale(1.1); }
+</style>
+</head>
+<body>
+  <div class="inner">
+    <div class="brand">
+      <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+        <path fill="#C8452C" d="M32 20c13.3 0 23.5 8.4 23.5 19.4C55.5 50.4 45 57.5 32 57.5S8.5 50.4 8.5 39.4C8.5 28.4 18.7 20 32 20Z"/>
+        <g fill="none" stroke="#243652" stroke-width="4.4" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M32 20.5c0-4.6 1-8.6 3-12.2"/>
+          <path d="M32 20.5C27.5 15.7 24 12.2 20 9.7"/>
+          <path d="M32 20.5c4.5-4.8 8-8.3 12-10.8"/>
+          <path d="M32 20.5C25 17 19 15 12.5 15.6"/>
+          <path d="M32 20.5c7-3.5 13-5.5 19.5-4.9"/>
+        </g>
+      </svg>
+      <b>Blue Tomato Studio</b>
+    </div>
+    <h1>Small apps that<br><span class="soft">do one thing.</span></h1>
+    <div class="icons">
+      <span class="plain"><img class="up" src="assets/img/app-slate.png" alt=""></span>
+      <span><img src="assets/img/app-hifzquran.png" alt=""></span>
+      <span><img src="assets/img/app-aloud.png" alt=""></span>
+    </div>
+  </div>
+</body>
+</html>
