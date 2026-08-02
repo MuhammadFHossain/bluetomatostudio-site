@@ -1,6 +1,7 @@
 # bluetomatostudio.com
 
-One page. It lists the apps and points at each one's own site. That is the whole job.
+One page for the design house. It says what we are, lists the apps, points at
+each one's own site, and gives one email address. That is the whole job.
 
 Plain HTML and CSS. No build step, no npm, nothing to install. You edit a file,
 you push it, it is live in about a minute.
@@ -9,11 +10,16 @@ you push it, it is live in about a minute.
 index.html          the page
 404.html            the page people get when a link is wrong
 assets/styles.css   every colour, size and spacing rule
-assets/img/         the three app icons, the favicon, the sharing picture
-assets/fonts/       Fraunces, the heading font
+assets/img/         the painted tomato, the three app icons, the favicon,
+                    the marker swipe, the sharing picture
+assets/stickers/    the hand-drawn creatures. Same set as the aloud app.
+assets/fonts/       Fraunces for headings, Kalam for the handwritten bits
 og-render.html      not a real page. The source for the sharing picture.
 CNAME               the domain. Do not delete this file.
 ```
+
+The look, in one line: bright white paper, a painted tomato, wonky Fraunces,
+handwriting in the margins, and boxes drawn twice by hand.
 
 ---
 
@@ -63,13 +69,12 @@ comes back as a few handwritten lines."
 Everything is written straight into `index.html`. There is no database and no
 content file to find. Search for the sentence you want to change and change it.
 
-The four sections, in order:
+The three sections, in order:
 
-- **Hero** — the big line and the sentence under it.
+- **Hero** — the big line, the sentence under it, and the painting.
 - **The apps** — the cards.
-- **Three rules we keep** — the promises that are true of every app. If one ever
-  stops being true, take it off this page the same day.
-- **Say hello** — the two contact cards.
+- **Say hello** — one line and one email address, `contact@bluetomatostudio.com`.
+  App questions and work enquiries both go there. Do not add a second address.
 
 ---
 
@@ -84,9 +89,19 @@ message. Run this from inside the site folder:
 "/Applications/Google Chrome.app/Contents/MacOS/Google Chrome" --headless --disable-gpu --hide-scrollbars --force-device-scale-factor=1 --screenshot=assets/img/og.png --window-size=1200,630 "file://$PWD/og-render.html"
 ```
 
-The favicon is `assets/img/favicon.svg`, drawn by hand in the file. The two PNG
-copies next to it are for older browsers and for the iPhone home screen. Rebuild
-them the same way, from a small page that holds just the mark.
+The sharing picture and both icons are built by a short Python script using
+Pillow, because headless Chrome is unreliable on this Mac. The script lives in
+the commit history for "the painting"; the short version is:
+
+- `assets/img/tomato-art.png` is the painting, full size, transparent behind it.
+- `assets/img/mark.png` is the same painting cropped tight to the fruit.
+- `assets/img/og.png` puts the mark, the headline and the painting on white.
+- `favicon-64.png` and `apple-touch-icon.png` are `mark.png` on white with a
+  small margin. They need a white background baked in, because iOS composites a
+  transparent home-screen icon onto black.
+
+If you repaint the tomato, replace `tomato-art.png`, re-crop `mark.png`, and
+rebuild those three.
 
 ---
 
@@ -136,22 +151,42 @@ All of it lives at the top of `assets/styles.css`, in one block. Change a value
 there and it changes everywhere on the page. Never write a colour into
 `index.html`.
 
+Every colour here was picked off the painted tomato itself.
+
 | | Light | Dark |
 | --- | --- | --- |
-| Page | `#FBFAF7` | `#15171E` |
-| Text | `#191C24` | `#E9E7E1` |
-| The blue | `#243652` | `#9DB8E0` |
-| The tomato | `#C8452C` | `#E8735A` |
+| Page, bright white | `#FFFFFF` | `#101820` |
+| Text | `#16202B` | `#EAEFF4` |
+| Blue, for links and buttons | `#0071C7` | `#6FB6F0` |
+| Bright blue, big shapes only | `#0F8CE8` | `#4FA6EE` |
+| The softest blue wash | `#EAF4FD` | `#17232F` |
+| Leaf green | `#5E7817` | `#A8C24A` |
 
 Dark mode follows the reader's Mac or phone. There is no switch to build.
 
-The page stays paper and ink on purpose. Three app icons sit on it and they are
-navy, teal and green. If the page itself picks up colour, they fight it.
+**The tomato is blue.** That is the name and the whole joke. There is no red
+anywhere on this site and there should never be. If you are adding something and
+reach for an accent colour, it is one of the blues above.
 
-Headings are Fraunces, the same face as the aloud and Hifz Quran sites, so the
-four sites read as a family. Body text is whatever the reader's device uses.
-That is a choice, not a shortcut: it loads instantly and it stays out of the way
-of the three app brands.
+The paper stays bright white. The painting is the only picture that is ours, and
+the three app icons are navy, teal and green. If the page itself picks up
+colour, they all fight each other.
+
+**Type.** Headings are Fraunces with its `WONK` axis on, which is the setting
+that gives it the odd curled leg. Little labels, the nav and the platform tags
+are Kalam, which is handwriting. Body copy is whatever the reader's device uses:
+it loads instantly and stays quiet between the two.
+
+**The drawn boxes.** Two things do this, both in `styles.css`. `--wobble` and
+`--wobble2` are eight different corner radii so no corner matches another, and
+`.app::before` is a second outline sitting a few pixels out and leaning half a
+degree, because anyone drawing a box by hand goes round twice and the lines
+never quite meet.
+
+**The stickers.** `assets/stickers/`, Farhan's own drawings, the same set the
+aloud app uses. They are decoration and nothing else, so every one of them
+carries `alt=""` and `aria-hidden="true"`. Two or three on a page is plenty. Any
+more and it stops being a design house and starts being a scrapbook.
 
 ---
 

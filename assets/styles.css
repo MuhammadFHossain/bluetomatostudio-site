@@ -1,60 +1,68 @@
 /* Blue Tomato Studio — website styles
-   The studio page is deliberately quiet. Three app icons sit on it (navy, teal,
-   green), so the page itself stays paper and ink and lets them be the colour.
-   Two accents only: the blue and the tomato, which is the whole name.
-   Every colour is a light/dark pair, so dark mode needs no extra markup. */
+   A design house, so the site should look like something was drawn by hand
+   rather than assembled. Bright white paper. Wonky Fraunces for the headings,
+   Kalam for the little handwritten notes, and boxes whose corners are all
+   slightly different so nothing looks stamped out by a machine.
+   Every colour here was lifted off the painted tomato.
+   Each one is a light/dark pair, so dark mode needs no extra markup. */
 
-/* ---- font ----
-   Fraunces, same as the aloud and Hifz Quran sites, so the family reads as one.
-   Body text is the system font on purpose: fast, neutral, and it does not
-   compete with any of the three app brands. */
+/* ---- fonts ----
+   Fraunces and Kalam, the same two the aloud site uses, so the family reads as
+   one hand. Fraunces runs with its WONK axis on, which is the setting that
+   gives it the odd curled leg on the g and the k. */
 @font-face {
   font-family: "Fraunces";
   src: url("fonts/Fraunces-VF.woff2") format("woff2");
   font-weight: 300 650; font-style: normal; font-display: swap;
 }
+@font-face {
+  font-family: "Kalam";
+  src: url("fonts/Kalam-Regular.woff2") format("woff2");
+  font-weight: 400; font-style: normal; font-display: swap;
+}
 
-/* ---- the colour vocabulary ---- */
+/* ---- the colour vocabulary, all of it off the painting ---- */
 :root {
-  --paper:   #FBFAF7;   /* the page */
-  --paper2:  #F4F2EC;   /* banded sections */
-  --card:    #FFFFFF;
-  --ink:     #191C24;   /* all text, instead of black */
-  --ink2:    #565B66;   /* second line of a card, body copy */
-  --muted:   #6E727D;   /* fine print. dark enough to pass AA on paper and card */
-  --line:    #E7E4DC;
-  --line2:   #D8D4C9;
-  --blue:    #243652;   /* the blue */
-  --tomato:  #C8452C;   /* the tomato */
-  --on-blue: #F6F8FC;
-  --glow:    rgba(200, 69, 44, 0.10);
-  --shadow:  rgba(25, 28, 36, 0.05);
-  --shadow2: rgba(25, 28, 36, 0.10);
+  --paper:  #FFFFFF;   /* bright white */
+  --wash:   #EAF4FD;   /* the softest blue, for the halo behind the tomato */
+  --wash2:  #F3F9FE;   /* fainter still, for a card that wants to sit back */
+  --ink:    #16202B;   /* text. a deep blue-grey, never black */
+  --ink2:   #4C5A68;
+  --muted:  #6B7887;   /* fine print. dark enough to pass AA on white */
+  --line:   #DCE7F1;
+  --line2:  #BED2E4;
+  --blue:   #0071C7;   /* links and buttons. the painting's blue, held down
+                          enough to read as text on white */
+  --sky:    #0F8CE8;   /* the painting's bright blue. big shapes only */
+  --leaf:   #5E7817;   /* the green off the stem */
+  --on-blue:#FFFFFF;
 
   --serif: "Fraunces", Georgia, "Times New Roman", serif;
+  --hand: "Kalam", "Bradley Hand", "Segoe Print", cursive;
   --ui: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
 
-  --wrap: 1000px;
-  --gutter: clamp(20px, 5vw, 40px);
-  --radius: 18px;
+  --wrap: 1080px;
+  --gutter: clamp(20px, 5vw, 44px);
+
+  /* hand-drawn corners: eight different radii, so no two are the same */
+  --wobble:  22px 44px 26px 38px / 38px 24px 42px 28px;
+  --wobble2: 42px 24px 40px 26px / 24px 40px 28px 44px;
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --paper:   #15171E;
-    --paper2:  #1B1E26;
-    --card:    #1E212A;
-    --ink:     #E9E7E1;
-    --ink2:    #A3A7B2;
-    --muted:   #7C808B;
-    --line:    #2A2E38;
-    --line2:   #363B47;
-    --blue:    #9DB8E0;
-    --tomato:  #E8735A;
-    --on-blue: #131A27;
-    --glow:    rgba(232, 115, 90, 0.09);
-    --shadow:  rgba(0, 0, 0, 0.40);
-    --shadow2: rgba(0, 0, 0, 0.55);
+    --paper:  #101820;
+    --wash:   #17232F;
+    --wash2:  #141E28;
+    --ink:    #EAEFF4;
+    --ink2:   #A6B3C0;
+    --muted:  #7D8B99;
+    --line:   #26333F;
+    --line2:  #35485A;
+    --blue:   #6FB6F0;
+    --sky:    #4FA6EE;
+    --leaf:   #A8C24A;
+    --on-blue:#0C141C;
   }
 }
 
@@ -67,53 +75,53 @@ body {
   color: var(--ink);
   font-family: var(--ui);
   font-size: 17px;
-  line-height: 1.62;
+  line-height: 1.65;
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 img { max-width: 100%; display: block; }
-::selection { background: var(--glow); }
+::selection { background: var(--wash); color: var(--ink); }
 
 a { color: var(--blue); text-underline-offset: 3px; text-decoration-color: var(--line2); }
 a:hover { text-decoration-color: currentColor; }
 
 h1, h2, h3 {
   font-family: var(--serif);
+  font-variation-settings: "SOFT" 60, "WONK" 1, "opsz" 60;
   font-weight: 560;
-  line-height: 1.1;
+  line-height: 1.08;
   letter-spacing: -0.015em;
   margin: 0;
 }
-h1 { font-size: clamp(40px, 7.4vw, 68px); }
-h2 { font-size: clamp(27px, 4.2vw, 38px); }
-h3 { font-size: 21px; letter-spacing: -0.01em; }
+h1 { font-size: clamp(42px, 7vw, 68px); }
+h2 { font-size: clamp(28px, 4.2vw, 38px); }
+h3 { font-size: 21px; letter-spacing: -0.008em; }
 p { margin: 0 0 1em; }
 
 .wrap { width: 100%; max-width: var(--wrap); margin: 0 auto; padding: 0 var(--gutter); }
-.lead { font-size: clamp(18px, 2.2vw, 21px); color: var(--ink2); }
+.lead { font-size: clamp(18px, 2.1vw, 20px); color: var(--ink2); }
 .small { font-size: 15px; }
 .muted { color: var(--muted); }
 
+/* the handwritten label above each section, set on a slight slant like
+   something pencilled into a margin */
 .eyebrow {
-  font-size: 12.5px;
-  font-weight: 600;
-  letter-spacing: 0.13em;
-  text-transform: uppercase;
-  color: var(--muted);
-  margin: 0 0 14px;
+  font-family: var(--hand);
+  font-size: 20px;
+  color: var(--sky);
+  letter-spacing: 0;
+  text-transform: none;
+  margin: 0 0 10px;
+  display: inline-block;
+  transform: rotate(-1.4deg);
 }
 
-section { padding: clamp(64px, 10vw, 108px) 0; }
+section { padding: clamp(56px, 8vw, 96px) 0; }
 
-/* ---- the mark ---- */
-.mark { width: 26px; height: 26px; color: var(--blue); flex: none; }
-.mark .fruit { color: var(--tomato); }
-
-/* ---- header ---- */
-/* Solid, not translucent. A blurred header over the hero's warm glow leaves a
-   visible seam where the blur region stops, and this page is too quiet to
-   carry an artifact like that. */
+/* ---- header ----
+   No tomato up here. It hangs in the hero instead, where there is room to see
+   it, and the bar stays out of the way. */
 .site-header {
   position: sticky; top: 0; z-index: 20;
   background: var(--paper);
@@ -121,67 +129,124 @@ section { padding: clamp(64px, 10vw, 108px) 0; }
   transition: border-color .2s ease;
 }
 .site-header.stuck { border-bottom-color: var(--line); }
-.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 68px; }
+.bar { display: flex; align-items: center; justify-content: space-between; gap: 16px; height: 70px; }
 
 .wordmark {
-  display: inline-flex; align-items: center; gap: 9px;
   font-family: var(--serif);
-  font-size: 18px; font-weight: 600; letter-spacing: -0.02em;
+  font-variation-settings: "SOFT" 60, "WONK" 1, "opsz" 20;
+  font-size: 19px; font-weight: 620; letter-spacing: -0.02em;
   color: var(--ink); text-decoration: none;
 }
 .wordmark:hover { color: var(--ink); }
+.wordmark .b { color: var(--sky); }
 
-.nav { display: flex; align-items: center; gap: 22px; font-size: 15px; }
+.nav { display: flex; align-items: center; gap: 24px; font-family: var(--hand); font-size: 19px; }
 .nav a { color: var(--ink2); text-decoration: none; }
-.nav a:hover { color: var(--ink); }
+.nav a:hover { color: var(--sky); }
 
-/* ---- hero ---- */
-.hero { position: relative; padding-top: clamp(56px, 9vw, 92px); padding-bottom: clamp(28px, 4vw, 48px); }
-/* the warm wash sits wholly inside the hero, so it fades out on its own
-   before it reaches the header instead of being cut off by it */
-.hero::before {
-  content: ""; position: absolute; inset: 0 0 auto 0; height: 640px;
-  background: radial-gradient(56% 44% at 44% 56%, var(--glow), transparent 72%);
-  pointer-events: none;
+/* ---- hero ----
+   The painting hangs on the right with a soft blue halo behind it, the way a
+   picture sits on a white wall. Nothing else competes for that side. */
+.hero { padding-top: clamp(28px, 4vw, 56px); padding-bottom: clamp(24px, 4vw, 44px); }
+.hero-grid {
+  display: grid;
+  grid-template-columns: 1.05fr 0.95fr;
+  align-items: center;
+  gap: clamp(20px, 4vw, 52px);
 }
-.hero .wrap { position: relative; }
-.hero h1 { max-width: 15ch; }
-.hero h1 .soft { color: var(--muted); }
-.hero .lead { max-width: 46ch; margin-top: 22px; }
+.hero h1 { max-width: 12ch; }
+.hero h1 .soft { color: var(--sky); }
+.hero .lead { max-width: 33ch; margin-top: 20px; }
+
+/* The marker swipe under "design house". It is a painted SVG stroke set as a
+   background image rather than a pseudo-element, so it always sits behind the
+   letters without any z-index wrangling, and it survives a line break. */
+.marker {
+  white-space: nowrap;
+  background-image: url("img/marker.svg");
+  background-repeat: no-repeat;
+  background-size: 100% 0.30em;
+  background-position: 0 82%;
+  padding: 0 .06em;
+}
+
+.art { position: relative; display: flex; justify-content: center; }
+.art::before {
+  content: ""; position: absolute; inset: 6% 4% 10% 4%;
+  border-radius: 50%;
+  background: radial-gradient(circle at 46% 42%, var(--wash), transparent 68%);
+}
+/* Only the painting, never a sticker. A bare `.art img` here would out-rank
+   .sticker on position and let the flex box stretch the sticker tall. */
+.art .art-img { position: relative; width: min(100%, 430px); height: auto; }
+
+/* ---- the hand-drawn stickers ----
+   Farhan's own drawings, the same set as the aloud app. They peek out from
+   behind things. Always decorative, never carrying meaning, so they are all
+   aria-hidden and none of them get alt text. */
+.sticker {
+  position: absolute;
+  width: 58px;
+  height: auto;
+  aspect-ratio: 1;          /* every sticker is square. never let a flex parent stretch one */
+  pointer-events: none;
+  z-index: 2;
+  opacity: .92;
+}
+@media (prefers-color-scheme: dark) { .sticker { opacity: .78; } }
 
 /* ---- the app cards ----
-   One card per app. Each is a single link to that app's own site, so this page
-   stays a signpost and every app keeps its own front door. */
+   Each card is one link out to that app's own site. This page is a signpost,
+   not a shop. The corners wobble, and they wobble differently on hover, so the
+   whole thing feels drawn rather than printed. */
 .apps {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(268px, 1fr));
-  gap: 18px;
+  grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
+  gap: 28px;   /* wide enough that the second pen line never touches its neighbour */
 }
 
 .app {
+  position: relative;
   display: flex; flex-direction: column;
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 26px 26px 22px;
+  background: var(--paper);
+  border: 2px solid var(--line);
+  border-radius: var(--wobble);
+  padding: 28px 28px 24px;
   text-decoration: none;
   color: inherit;
-  box-shadow: 0 1px 2px var(--shadow);
-  transition: transform .18s ease, box-shadow .18s ease, border-color .18s ease;
+  transition: transform .22s ease, border-color .22s ease, border-radius .22s ease;
 }
+.app:nth-child(even) { border-radius: var(--wobble2); }
+
+/* the second pass of the pen. Anyone drawing a box by hand goes round twice,
+   and the two lines never quite meet, so this one sits a few pixels out and
+   leans the other way. */
+.app::before,
+.hello::before {
+  content: "";
+  position: absolute; inset: -7px;
+  border: 2px solid var(--line);
+  border-radius: var(--wobble2);
+  opacity: .5;
+  transform: rotate(.35deg);
+  pointer-events: none;
+}
+.app:nth-child(even)::before { border-radius: var(--wobble); transform: rotate(-.35deg); }
+.app:hover::before { opacity: .85; }
 .app:hover {
-  transform: translateY(-3px);
+  transform: translateY(-4px) rotate(-.5deg);
   border-color: var(--line2);
-  box-shadow: 0 12px 28px var(--shadow2);
+  border-radius: var(--wobble2);
 }
-.app:focus-visible { outline: 2px solid var(--blue); outline-offset: 3px; }
+.app:nth-child(even):hover { transform: translateY(-4px) rotate(.5deg); border-radius: var(--wobble); }
+.app:focus-visible { outline: 2px solid var(--blue); outline-offset: 4px; }
 
 .app .icon {
   width: 72px; height: 72px;
   border-radius: 22.4%;
   overflow: hidden;
-  box-shadow: 0 1px 3px var(--shadow2), inset 0 0 0 1px rgba(0, 0, 0, .06);
-  margin-bottom: 20px;
+  box-shadow: inset 0 0 0 1px rgba(22, 32, 43, .07);
+  margin-bottom: 22px;
 }
 .app .icon img { width: 100%; height: 100%; object-fit: cover; }
 /* Slate ships its icon with a transparent margin already baked in, so it needs
@@ -192,81 +257,65 @@ section { padding: clamp(64px, 10vw, 108px) 0; }
 .app .row { display: flex; align-items: baseline; gap: 10px; flex-wrap: wrap; margin-bottom: 8px; }
 .app h3 { color: var(--ink); }
 
+/* the platform label, handwritten, tilted, like a note on a contact sheet */
 .chip {
-  font-size: 11.5px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase;
-  color: var(--muted);
-  border: 1px solid var(--line);
-  border-radius: 999px;
-  padding: 3px 9px;
+  font-family: var(--hand);
+  font-size: 16px;
+  color: var(--sky);
+  transform: rotate(-2deg);
   white-space: nowrap;
 }
 
-.app p { color: var(--ink2); font-size: 16px; line-height: 1.55; margin: 0 0 20px; }
+.app p { color: var(--ink2); font-size: 16px; line-height: 1.58; margin: 0 0 22px; }
 .app .go {
   margin-top: auto;
   font-size: 15px; font-weight: 500; color: var(--blue);
   display: inline-flex; align-items: center; gap: 7px;
 }
-.app .go svg { width: 14px; height: 14px; transition: transform .18s ease; }
-.app:hover .go svg { transform: translateX(3px); }
-
-/* ---- the three facts ---- */
-.band { background: var(--paper2); border-block: 1px solid var(--line); }
-.facts {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
-  gap: 18px 40px;
-  margin-top: 40px;
-}
-.fact h3 { margin-bottom: 8px; }
-.fact p { color: var(--ink2); font-size: 16px; margin: 0; }
+.app .go svg { width: 15px; height: 15px; transition: transform .2s ease; }
+.app:hover .go svg { transform: translateX(4px) rotate(-4deg); }
 
 /* ---- contact ---- */
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
-  margin-top: 40px;
+.hello {
+  position: relative;
+  border: 2px solid var(--line);
+  border-radius: var(--wobble);
+  background: var(--wash2);
+  padding: clamp(32px, 5vw, 52px);
 }
-.card {
-  background: var(--card);
-  border: 1px solid var(--line);
-  border-radius: var(--radius);
-  padding: 26px;
-  box-shadow: 0 1px 2px var(--shadow);
-}
-.card h3 { margin-bottom: 8px; }
-.card p { color: var(--ink2); font-size: 16px; margin: 0 0 16px; }
-.card p:last-child { margin-bottom: 0; }
 
 .btn {
   display: inline-flex; align-items: center; gap: 8px;
   background: var(--blue); color: var(--on-blue);
-  border-radius: 11px;
-  padding: 11px 18px;
-  font-size: 15px; font-weight: 550;
+  border-radius: 16px 22px 18px 20px / 20px 16px 22px 18px;
+  padding: 13px 22px;
+  font-size: 16px; font-weight: 550;
   text-decoration: none;
-  transition: transform .15s ease, opacity .15s ease;
+  transition: transform .16s ease, opacity .16s ease;
 }
-.btn:hover { transform: translateY(-1px); opacity: .92; color: var(--on-blue); }
-.btn-quiet {
-  background: transparent; color: var(--ink);
-  border: 1px solid var(--line2);
-}
-.btn-quiet:hover { color: var(--ink); border-color: var(--ink2); }
+.btn:hover { transform: translateY(-2px) rotate(-1deg); opacity: .93; color: var(--on-blue); }
 
 /* ---- footer ---- */
-.site-footer { border-top: 1px solid var(--line); padding: 40px 0 56px; }
+.site-footer { border-top: 2px dashed var(--line); padding: 38px 0 56px; }
 .foot-grid { display: flex; justify-content: space-between; gap: 28px; flex-wrap: wrap; }
-.foot-links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-size: 15px; }
+.foot-links { display: flex; flex-wrap: wrap; gap: 8px 20px; font-family: var(--hand); font-size: 19px; }
 .foot-links a { color: var(--ink2); text-decoration: none; }
-.foot-links a:hover { color: var(--ink); }
+.foot-links a:hover { color: var(--sky); }
 .foot-note { font-size: 14px; color: var(--muted); margin: 14px 0 0; }
 
 /* ---- small screens ---- */
+@media (max-width: 760px) {
+  /* the painting goes above the words, smaller, still the first thing you see */
+  .hero-grid { grid-template-columns: 1fr; gap: 10px; }
+  .art { order: -1; }
+  .art img { width: min(62%, 250px); }
+  .hero h1, .hero .lead { max-width: none; }
+  .sticker { width: 46px; }
+}
+
 @media (max-width: 620px) {
   .hide-sm { display: none; }
-  .nav { gap: 16px; }
+  .nav { gap: 18px; }
   .foot-grid { flex-direction: column; gap: 22px; }
 }
 

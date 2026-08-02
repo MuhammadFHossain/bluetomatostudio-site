@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 30" preserveAspectRatio="none">
+  <!-- One swipe of a fat marker: thicker in the middle, tapered and slightly
+       ragged at both ends, and not quite level. Stretched to fit whatever word
+       it sits under, which is why preserveAspectRatio is off. -->
+  <path fill="#B9DCF7" d="M4 19.5c22-5.4 62-8.6 104-9.4 46-.9 96 .6 145 4.6 8 .7 12 2.3 11.6 4.6-.4 2.4-5 4.2-13 5-38 3.9-84 5.6-134 5-40-.5-77-2.6-105-6.1-6-.8-9.4-2-9-3.4.3-1.2 3.3-2.2 8.4-3.3Z"/>
+  <path fill="#D6EAFB" d="M20 12.8c30-4.2 76-6.6 126-6.9 34-.2 66 .8 94 2.8-30 .3-64 1.2-98 2.6-44 1.8-84 4.3-113 7.4-9 1-14 .4-13.4-1.9.5-1.9 2.6-3 4.4-4Z"/>
+</svg>
