@@ -1,7 +1,16 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 30" preserveAspectRatio="none">
-  <!-- One swipe of a fat marker: thicker in the middle, tapered and slightly
-       ragged at both ends, and not quite level. Stretched to fit whatever word
-       it sits under, which is why preserveAspectRatio is off. -->
-  <path fill="#B9DCF7" d="M4 19.5c22-5.4 62-8.6 104-9.4 46-.9 96 .6 145 4.6 8 .7 12 2.3 11.6 4.6-.4 2.4-5 4.2-13 5-38 3.9-84 5.6-134 5-40-.5-77-2.6-105-6.1-6-.8-9.4-2-9-3.4.3-1.2 3.3-2.2 8.4-3.3Z"/>
-  <path fill="#D6EAFB" d="M20 12.8c30-4.2 76-6.6 126-6.9 34-.2 66 .8 94 2.8-30 .3-64 1.2-98 2.6-44 1.8-84 4.3-113 7.4-9 1-14 .4-13.4-1.9.5-1.9 2.6-3 4.4-4Z"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 60" preserveAspectRatio="none">
+  <!-- Scribbled over, not underlined. Five passes of a marker going back and
+       forth, none level, none the same length, ends overshooting. The white
+       gaps between the passes are the whole point: without them it squashes
+       into a flat bar and stops reading as a scribble. Stretched to fit
+       whatever word sits on top, which is why preserveAspectRatio is off. -->
+  <g fill="none" stroke-linecap="round" stroke="#8FC8F3">
+    <path stroke-width="9" d="M5 21c48-10 96 9 146-1 46-9 96 7 148-10"/>
+    <path stroke-width="8" d="M297 34c-52 10-104-9-152 2-48 11-98-6-141 6"/>
+    <path stroke-width="7" d="M12 47c56-8 112 9 168 1 34-5 66-2 106 5"/>
+  </g>
+  <g fill="none" stroke-linecap="round" stroke="#BFDEFA">
+    <path stroke-width="6" d="M38 11c62 7 124-9 188 3"/>
+    <path stroke-width="5" d="M272 55c-62 6-124-7-186 2"/>
+  </g>
 </svg>

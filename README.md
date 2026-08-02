@@ -188,6 +188,25 @@ aloud app uses. They are decoration and nothing else, so every one of them
 carries `alt=""` and `aria-hidden="true"`. Two or three on a page is plenty. Any
 more and it stops being a design house and starts being a scrapbook.
 
+Always use the **`-solid`** file, never the plain outline. The originals are
+line drawings with nothing behind the lines, so a card edge runs straight
+through the middle of a face. The `-solid` versions have the inside of the
+animal filled with paper.
+
+To make a new one: flood the transparent area in from the frame, and anything
+the flood could not reach is inside the animal, so it gets white. Two catches.
+The stroke is soft at the edges, so count anything above about 25 alpha as wall
+and thicken it, or the flood squeezes through the outline. And a drawing cropped
+at its own frame is an open shape, so it needs that edge treated as a wall too.
+The cat and the walrus have outlines that are genuinely open and cannot be
+filled this way. They are not used on the site.
+
+**The scribble** under "design house" is `assets/img/marker.svg`, five passes of
+a marker going back and forth. It is stretched to fit the word, so its aspect
+ratio is deliberately not preserved. The white gaps between the passes are what
+make it read as a scribble. Squash it below about `0.7em` tall and the passes
+merge into a flat bar.
+
 ---
 
 ## Checking it before you push
