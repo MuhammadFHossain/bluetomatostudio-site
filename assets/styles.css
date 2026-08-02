@@ -4,7 +4,11 @@
    Kalam for the little handwritten notes, and boxes whose corners are all
    slightly different so nothing looks stamped out by a machine.
    Every colour here was lifted off the painted tomato.
-   Each one is a light/dark pair, so dark mode needs no extra markup. */
+
+   There is no dark mode, on purpose. The painting is a bright thing on white
+   paper and it does not survive being inverted, so the site stays light
+   whatever the reader's Mac is set to. Do not add a prefers-color-scheme
+   block back in. */
 
 /* ---- fonts ----
    Fraunces and Kalam, the same two the aloud site uses, so the family reads as
@@ -47,23 +51,6 @@
   /* hand-drawn corners: eight different radii, so no two are the same */
   --wobble:  22px 44px 26px 38px / 38px 24px 42px 28px;
   --wobble2: 42px 24px 40px 26px / 24px 40px 28px 44px;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --paper:  #101820;
-    --wash:   #17232F;
-    --wash2:  #141E28;
-    --ink:    #EAEFF4;
-    --ink2:   #A6B3C0;
-    --muted:  #7D8B99;
-    --line:   #26333F;
-    --line2:  #35485A;
-    --blue:   #6FB6F0;
-    --sky:    #4FA6EE;
-    --leaf:   #A8C24A;
-    --on-blue:#0C141C;
-  }
 }
 
 /* ---- base ---- */
@@ -197,7 +184,6 @@ section { padding: clamp(44px, 6vw, 76px) 0; }
   z-index: 2;
   opacity: .92;
 }
-@media (prefers-color-scheme: dark) { .sticker { opacity: .78; } }
 
 /* the bean stands behind the tomato and leans out when you look at it */
 .bean {

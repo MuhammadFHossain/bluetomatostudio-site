@@ -153,16 +153,19 @@ there and it changes everywhere on the page. Never write a colour into
 
 Every colour here was picked off the painted tomato itself.
 
-| | Light | Dark |
-| --- | --- | --- |
-| Page, bright white | `#FFFFFF` | `#101820` |
-| Text | `#16202B` | `#EAEFF4` |
-| Blue, for links and buttons | `#0071C7` | `#6FB6F0` |
-| Bright blue, big shapes only | `#0F8CE8` | `#4FA6EE` |
-| The softest blue wash | `#EAF4FD` | `#17232F` |
-| Leaf green | `#5E7817` | `#A8C24A` |
+| | |
+| --- | --- |
+| Page, bright white | `#FFFFFF` |
+| Text | `#16202B` |
+| Blue, for links and buttons | `#0071C7` |
+| Bright blue, big shapes only | `#0F8CE8` |
+| The softest blue wash | `#EAF4FD` |
+| Leaf green | `#5E7817` |
 
-Dark mode follows the reader's Mac or phone. There is no switch to build.
+**There is no dark mode, and there should not be one.** The painting is a
+bright object on white paper and it does not survive being inverted, so the site
+stays light whatever the reader's Mac is set to. Do not add a
+`prefers-color-scheme` block back in.
 
 **The tomato is blue.** That is the name and the whole joke. There is no red
 anywhere on this site and there should never be. If you are adding something and
@@ -198,8 +201,13 @@ the flood could not reach is inside the animal, so it gets white. Two catches.
 The stroke is soft at the edges, so count anything above about 25 alpha as wall
 and thicken it, or the flood squeezes through the outline. And a drawing cropped
 at its own frame is an open shape, so it needs that edge treated as a wall too.
-The cat and the walrus have outlines that are genuinely open and cannot be
-filled this way. They are not used on the site.
+The cat, the walrus, the elephant and the snail cannot be filled this way, so
+they are not used. Three that can: the bean, the dog and the fox.
+
+One more trap: `index.html` loads the stylesheet as `styles.css?v=…`. **Bump
+that tag every time you change the CSS.** Leave it alone and the browser keeps
+serving the old file, and you spend an evening wondering why a change you can
+see in the source is not on the page.
 
 **The scribble** under "design house" is `assets/img/marker.svg`, five passes of
 a marker going back and forth. It is stretched to fit the word, so its aspect
