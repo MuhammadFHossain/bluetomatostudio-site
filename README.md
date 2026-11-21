@@ -3,6 +3,9 @@
 One page for the design house. It says what we are, lists the apps, points at
 each one's own site, and gives one email address. That is the whole job.
 
+The one exception is brevva keys, whose pages live here under `/brevva/` (see
+"The brevva keys pages" below), because its App Store listing points at them.
+
 Plain HTML and CSS. No build step, no npm, nothing to install. You edit a file,
 you push it, it is live in about a minute.
 
@@ -16,6 +19,7 @@ assets/stickers/    the hand-drawn creatures. Same set as the aloud app.
 assets/fonts/       Fraunces for headings, Kalam for the handwritten bits
 og-render.html      not a real page. The source for the sharing picture.
 CNAME               the domain. Do not delete this file.
+brevva/             brevva keys: the product page, privacy/ and support/
 ```
 
 The look, in one line: bright white paper, a painted tomato, wonky Fraunces,
@@ -45,8 +49,9 @@ Five things change. Nothing else.
 Also add the app to the footer link list at the bottom of `index.html`, next to
 Slate, Hifz Quran and aloud.
 
-The cards lay themselves out. Three across on a laptop, one under the other on a
-phone. A fourth app wraps to a second row on its own.
+The cards lay themselves out: two by two on a laptop while there are four, one
+under the other on a phone. With a fifth app, delete the "Four apps sit two by
+two" block in `styles.css` and they go back to three across.
 
 ### Writing the one line
 
@@ -225,3 +230,31 @@ python3 -m http.server 4190
 
 Then open `http://localhost:4190`. Worth looking at the page narrow as well as
 wide, and in dark mode, before pushing.
+
+---
+
+## The brevva keys pages
+
+The App Store listing for brevva keys points its Marketing, Support and Privacy
+Policy links at these three addresses, so they must always exist:
+
+```
+brevva/index.html           https://bluetomatostudio.com/brevva/
+brevva/privacy/index.html   https://bluetomatostudio.com/brevva/privacy/
+brevva/support/index.html   https://bluetomatostudio.com/brevva/support/
+brevva/assets/              brevva.css, display.js, the dot font, screenshots, og.png
+```
+
+They carry the app's own night look (colours from `BrevvaCore/.../Palette.swift`
+in the app repo) inside the studio's bar and footer. `dots.woff` is a font built
+from the app's `DotFont.swift` glyphs: capitals, digits and `: . - ' % / >` only.
+
+Things to change when they happen:
+
+- **2.1 reaches the App Store.** Remove the "Version note" box on the brevva page,
+  drop "(2.1)" and "(2.0, or ...)" from the table under "Where your words go", and
+  update the "Who makes it" dates. The privacy policy covers both versions already.
+- **Anything about data changes in the app** (a new download, a new thing kept on
+  the phone, a new use of Full Access): update the table and the "Every network
+  connection" list in `brevva/privacy/index.html`, and its "Last updated" date.
+- **CSS changes:** bump `brevva.css?v=` in all three pages.

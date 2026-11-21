@@ -208,6 +208,11 @@ section { padding: clamp(44px, 6vw, 76px) 0; }
   grid-template-columns: repeat(auto-fit, minmax(272px, 1fr));
   gap: 24px;   /* wide enough that the second pen line never touches its neighbour */
 }
+/* Four apps sit two by two on a laptop, so none is left on a row by itself.
+   With a fifth, take this block out and they go back to three across. */
+@media (min-width: 761px) {
+  .apps { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 30px 28px; }
+}
 
 .app {
   position: relative;
