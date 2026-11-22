@@ -3,27 +3,27 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>brevva keys: a voice keyboard that keeps your words on your iPhone · Blue Tomato Studio</title>
-<meta name="description" content="An iPhone keyboard with dictation built in. Tap the mic and talk: it takes out the ums and types where you were typing. Speech, typing and tidying run on the iPhone. No account.">
+<title>brevva keys: a keyboard for iPhone with dictation built in · Blue Tomato Studio</title>
+<meta name="description" content="Talk in any app, and brevva keys types it for you. Tap the mic, talk, tap Add: your words go in where you were typing, tidied. Speech, typing and tidying happen on the iPhone. No account.">
 <link rel="canonical" href="https://bluetomatostudio.com/brevva/">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="icon" type="image/png" sizes="64x64" href="/brevva/assets/favicon-64.png">
 <link rel="apple-touch-icon" href="/brevva/assets/apple-touch-icon.png">
 <meta property="og:type" content="website">
 <meta property="og:site_name" content="Blue Tomato Studio">
-<meta property="og:title" content="brevva keys: a voice keyboard that keeps your words on your iPhone">
-<meta property="og:description" content="Tap the mic and talk. It takes out the ums and types where you were typing. Speech, typing and tidying run on the iPhone. No account.">
+<meta property="og:title" content="brevva keys: a keyboard for iPhone with dictation built in">
+<meta property="og:description" content="Tap the mic and talk. Your words appear as you speak, right where you are typing, tidied up. Speech, typing and tidying happen on the iPhone.">
 <meta property="og:url" content="https://bluetomatostudio.com/brevva/">
 <meta property="og:image" content="https://bluetomatostudio.com/brevva/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
-<meta property="og:image:alt" content="brevva keys: the keyboard's listening display, and the words it typed.">
+<meta property="og:image:alt" content="brevva keys. Talk. It types. The keyboard's listening display with the words it heard and an Add key.">
 <meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="brevva keys: a voice keyboard that keeps your words on your iPhone">
-<meta name="twitter:description" content="Tap the mic and talk. It takes out the ums and types where you were typing. Speech, typing and tidying run on the iPhone. No account.">
+<meta name="twitter:title" content="brevva keys: a keyboard for iPhone with dictation built in">
+<meta name="twitter:description" content="Tap the mic and talk. Your words appear as you speak, right where you are typing, tidied up. Speech, typing and tidying happen on the iPhone.">
 <meta name="twitter:image" content="https://bluetomatostudio.com/brevva/assets/og.png">
 <link rel="preload" href="/brevva/assets/dots.woff?v=1" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/brevva/assets/brevva.css?v=1">
+<link rel="stylesheet" href="/brevva/assets/brevva.css?v=2">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"SoftwareApplication","name":"brevva keys","operatingSystem":"iOS 26.2 or later","applicationCategory":"UtilitiesApplication","url":"https://bluetomatostudio.com/brevva/","downloadUrl":"https://apps.apple.com/app/id6761425575","publisher":{"@type":"Organization","name":"Blue Tomato Studio LLC","url":"https://bluetomatostudio.com/"}}
 </script>
@@ -54,25 +54,77 @@
   <section class="hero first">
     <div class="wrap hero-grid">
       <div>
-        <h1>The voice keyboard that keeps your words on your iPhone.</h1>
-        <p class="lede">brevva keys is a keyboard for iPhone with dictation built in. Tap the mic and talk: it takes out the ums, keeps only your correction, and types the words where you were typing. Speech, typing and tidying all happen on the phone. No account, nothing to sign in to.</p>
+        <p class="status" aria-hidden="true"><span class="dots"><span class="lamp"></span>Ready</span><span class="dots dim">On this phone</span></p>
+        <h1>Talk in any app, and brevva keys types it for you.</h1>
+        <p class="lede">brevva keys is a keyboard for iPhone with dictation built in. Tap the mic key and the keys turn into a small display that listens. Your words appear as you speak. Tap Add and they drop into the message, email or note you were writing.</p>
         <div class="cta-row">
-          <a class="key breathe" href="https://apps.apple.com/app/id6761425575">Get brevva keys on the App Store</a>
-          <a class="quiet" href="#privacy">See where your words go</a>
+          <a class="key" href="https://apps.apple.com/app/id6761425575">Get brevva keys on the App Store</a>
+          <a class="quiet" href="#privacy">Where your words go</a>
         </div>
-        <ul class="facts" aria-label="Requirements">
+        <ul class="facts" aria-label="Good to know">
           <li>iPhone, iOS 26.2 or later</li>
-          <li>US English only</li>
-          <li>About 600&nbsp;MB of voice files on first open</li>
+          <li>US English</li>
+          <li>No account</li>
           <li>Works offline once set up</li>
         </ul>
       </div>
 
+      <!-- The real listening panel, cropped from the 2.1 store capture.
+           Swap brevva/assets/shots/listening.webp for a new capture when the panel changes. -->
+      <figure class="hero-shot">
+        <img src="/brevva/assets/shots/listening.webp" width="900" height="710" fetchpriority="high" decoding="async"
+             alt="The brevva keys keyboard listening. A dark display reads LISTENING 0:11 over a strip of lit amber dots. Below it the words so far: Running ten minutes late. Grab us a table by the window and order me the usual, thank you! The last words are in amber. Under them a close key, 18 WORDS, and an amber Add key.">
+        <figcaption>The keyboard listening, in version 2.1. A screenshot from the app; the words are a sample.</figcaption>
+      </figure>
+    </div>
+  </section>
+
+
+  <!-- ========================= HOW IT WORKS ========================= -->
+  <section id="how">
+    <div class="wrap split">
+      <figure class="store">
+        <img class="shot" src="/brevva/assets/shots/in-place.webp" width="660" height="1434" loading="lazy" decoding="async"
+             alt="A picture from the App Store page, headed NEVER LEAVE YOUR APP. A text box holds the words Running ten minutes late. Grab us a table by the window and order me the usual, thank you! with the brevva keys keyboard back below it.">
+        <figcaption>From the App Store page: the words went into the box, and the keys came back.</figcaption>
+      </figure>
+      <div>
+        <div class="intro">
+          <p class="dots label">How it works</p>
+          <h2>Tap the mic, talk, tap Add.</h2>
+        </div>
+        <ol class="steps">
+          <li><div><h3>Tap the mic</h3><p>The mic on the brevva keys keyboard, in amber. The keys turn into a small display that listens.</p></div></li>
+          <li><div><h3>Talk</h3><p>Your words appear as you speak. It listens for up to three minutes at a time.</p></div></li>
+          <li><div><h3>Tap Add</h3><p>The words go in where you were typing, already tidied. You never leave the app you are in.</p></div></li>
+        </ol>
+        <p class="note" style="margin-top:22px">You can also start from the Action Button, or by saying “Dictate with brevva keys” to Siri. The globe and microphone in the strip below the keys belong to iOS: that microphone starts Apple’s own dictation.</p>
+        <div class="callout">
+          <span class="dots">Which version</span>
+          <p>Listening inside the keyboard is new in version 2.1. In version 2.0 the mic key opens the brevva keys app to listen, and your words are waiting when you go back. The version number is at the bottom of the app’s Settings.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ============================ THE TIDY ============================ -->
+  <section id="tidy">
+    <div class="wrap split flip">
+      <div>
+        <div class="intro">
+          <p class="dots label">The tidy</p>
+          <h2>It takes out the ums and keeps your correction.</h2>
+        </div>
+        <p>Every dictation goes through brevva’s own rules on the phone before it is typed. Filler words like “um” come out and punctuation goes in. Change your mind halfway (“at two, actually three”) and only the correction stays.</p>
+        <p>On iPhones with Apple Intelligence turned on, Apple’s on-device model then gives the words a second, careful tidy a moment after they go in. Say a list and it comes out as a list. If you have already typed on, it leaves your words as they are.</p>
+      </div>
+
       <!-- A worked example in the app's night display. Without script it shows the
            finished state; with script it plays once (under five seconds) and stops. -->
-      <div>
+      <div class="shot-col">
         <div class="display demo" id="demo" aria-labelledby="demo-title">
-          <h2 class="visually-hidden" id="demo-title">A worked example of the tidy</h2>
+          <h3 class="visually-hidden" id="demo-title">A worked example of the tidy</h3>
           <div class="head">
             <span class="dots"><span class="rec" aria-hidden="true"></span><span data-status>Tidied</span></span>
             <span class="dots right" aria-hidden="true">On this phone</span>
@@ -94,37 +146,7 @@
             <button class="replay" type="button" data-replay hidden>Play it again</button>
           </div>
         </div>
-        <p class="provenance">A worked example. We wrote the sentence; the second line is exactly what brevva’s cleanup rules return for it (version 2.1, build 17, run on a Mac). On iPhones with Apple Intelligence, a second tidy can go further.</p>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- ========================= HOW IT WORKS ========================= -->
-  <section id="how">
-    <div class="wrap split">
-      <figure class="wide">
-        <img class="shot" src="/brevva/assets/listening.webp" width="1000" height="778" loading="lazy" decoding="async"
-             alt="The keyboard listening: a dark display reads LISTENING 0:11 above a strip of lit amber dots. Below it the words so far, the last few in amber, then a close key, 20 WORDS, and an amber Add key.">
-        <figcaption>Version 2.1, listening inside the keyboard. A screenshot from the app; the words are a sample.</figcaption>
-      </figure>
-      <div>
-        <div class="intro">
-          <p class="dots label">How it works</p>
-          <h2>Tap the mic, talk, tap Add.</h2>
-        </div>
-        <ol class="steps">
-          <li><div><h3>Tap the mic</h3><p>It sits at the right end of the bar above the keys. The keys turn into a small display that listens.</p></div></li>
-          <li><div><h3>Talk</h3><p>Your words appear as you speak. The last few, still settling, show in amber.</p></div></li>
-          <li><div><h3>Tap Add</h3><p>The words go in where you were typing, already tidied: filler out, punctuation in, your correction kept.</p></div></li>
-          <li><div><h3>A second tidy, still on the phone</h3><p>With Apple Intelligence turned on, Apple’s on-device model gives the words a careful second pass a moment later. Say a list and it comes out as a list.</p></div></li>
-        </ol>
-        <div class="callout">
-          <span class="dots">Version note</span>
-          <p>The App Store has version 2.0. In 2.0 the mic key opens the brevva keys app to listen; you talk, then go back to your app and the words are there.</p>
-          <p>Listening inside the keyboard, as shown here, is version 2.1, in public testing now. <a href="https://testflight.apple.com/join/Bq4NWRvv">Join the 2.1 test on TestFlight</a>.</p>
-        </div>
-        <p class="note" style="margin-top:18px">You can also start from the Action Button, or say “Dictate with brevva keys” to Siri.</p>
+        <p class="provenance">A worked example. We wrote the sentence; the second line is exactly what brevva’s rules return for it, run from the version 2.1 (19) code on a Mac. Apple Intelligence can tidy further on iPhones that have it.</p>
       </div>
     </div>
   </section>
@@ -132,53 +154,54 @@
 
   <!-- ============================ TYPING ============================ -->
   <section id="typing">
-    <div class="wrap split flip">
+    <div class="wrap split">
+      <figure class="store">
+        <img class="shot" src="/brevva/assets/shots/keys.webp" width="660" height="1434" loading="lazy" decoding="async"
+             alt="A picture from the App Store page, headed A REAL KEYBOARD. SWIPE TOO. The brevva keys keyboard up close below the app, with brevva written in dot letters on the space bar.">
+        <figcaption>From the App Store page: the keys up close.</figcaption>
+      </figure>
       <div>
         <div class="intro">
           <p class="dots label">Typing</p>
-          <h2>Types like Apple’s keyboard, down to the key sizes.</h2>
+          <h2>When you would rather type, it feels like the keyboard you know.</h2>
+          <p>The same layout, the same key sizes and the same feel as the keyboard that came with your iPhone. Autocorrect is built to keep up with fast thumbs.</p>
         </div>
         <dl class="spec">
-          <div><dt>Layout</dt><dd>The iOS layout and key sizes, measured from Apple’s own keyboard: keys 33.5 by 43 points, 6 points apart.</dd></div>
           <div><dt>Autocorrect</dt><dd>Reads where each tap landed, fixes slips as you type, and takes a second look at the sentence when you pause.</dd></div>
           <div><dt>Space bar</dt><dd>When a word looks finished, a tap that lands just above the space bar counts as a space.</dd></div>
           <div><dt>Undo</dt><dd>Press delete once to put back what you typed. Tap the word in the bar and it will not make that change again.</dd></div>
-          <div><dt>Swipe</dt><dd>Slide from letter to letter. The shape is read on the phone.</dd></div>
+          <div><dt>Swipe</dt><dd>Slide from letter to letter and lift.</dd></div>
           <div><dt>Your shortcuts</dt><dd>Uses the text replacements you already set up in iPhone Settings.</dd></div>
           <div><dt>Cursor</dt><dd>Hold the space bar and slide to move the cursor.</dd></div>
+          <div><dt>Light and dark</dt><dd>A light keyboard and a dark one, matching the rest of your iPhone.</dd></div>
         </dl>
       </div>
-      <figure class="shot-col">
-        <img class="shot" src="/brevva/assets/typing.webp" width="760" height="1066" loading="lazy" decoding="async"
-             alt="The brevva keys keyboard in dark mode under a text box that reads: Hey, running about ten minutes late. Grab us a table by the window and order me the usual, thank you! The space bar says brevva.">
-        <figcaption>Typing in the app’s try-it box, version 2.1.</figcaption>
-      </figure>
     </div>
   </section>
 
 
   <!-- ========================== YOUR WORDS ========================== -->
   <section id="words">
-    <div class="wrap split">
-      <figure>
-        <img class="shot" src="/brevva/assets/words.webp" width="760" height="889" loading="lazy" decoding="async"
-             alt="Your dictionary in the brevva keys app: counts for names, typed, spoken and fixes, then a list of words you say with how many times each was heard.">
-        <figcaption>Your dictionary, in the app. Every word it has learned is listed there.</figcaption>
-      </figure>
+    <div class="wrap split flip">
       <div>
         <div class="intro">
           <p class="dots label">Your words</p>
-          <h2>It learns your words, and leaves your phrases alone.</h2>
-          <p>Names, places and the words you keep typing go into your own dictionary on the iPhone, so autocorrect stops fighting them. Your own words are never “corrected”. Neither are these:</p>
+          <h2>It learns your words, and spells your phrases your way.</h2>
+          <p>Names, places and the words you keep typing go into your own dictionary on the iPhone, so autocorrect stops changing them. Every word it has learned is listed in the app, and you can delete any of them.</p>
         </div>
-        <ul class="chips" aria-label="Some of the phrases built in as never corrected">
-          <li>In sha Allah</li><li>inshallah</li><li>Alhamdulillah</li><li>Mashallah</li><li>Subhanallah</li>
-          <li>Bismillah</li><li>JazakAllah khair</li><li>Asalam Alaikum</li><li>Walaikum asalam</li>
-          <li>Eid Mubarak</li><li>Ramadan</li><li>iftar</li><li>suhoor</li><li>masjid</li><li>Jummah</li>
-          <li>Fajr</li><li>Maghrib</li><li>dua</li><li>wallahi</li><li>yalla</li><li>shukran</li>
+        <ul class="chips" aria-label="Some of the words built into the keyboard">
+          <li>inshallah</li><li>Alhamdulillah</li><li>Mashallah</li><li>Subhanallah</li><li>Bismillah</li>
+          <li>JazakAllah khair</li><li>Asalam Alaikum</li><li>Walaikum asalam</li><li>Eid Mubarak</li>
+          <li>Ramadan</li><li>iftar</li><li>suhoor</li><li>masjid</li><li>Jummah</li><li>Fajr</li>
+          <li>Maghrib</li><li>dua</li><li>wallahi</li><li>yalla</li><li>shukran</li>
         </ul>
-        <p class="note" style="margin-top:16px">Some of the words in the list that ships inside the keyboard. When you dictate, it hands Apple’s speech model the names and words it has learned from you, so they are more likely to come out your way. Turn off <em>Save words you type</em> in the app and it learns nothing new.</p>
+        <p class="note" style="margin-top:16px">Some of the Arabic words and phrases built into the keyboard, so typing them is never “corrected” away. When you dictate, the greetings come out as In sha Allah, Asalam Alaikum and Alhamdulillah, whichever spelling the speech model picked.</p>
       </div>
+      <figure class="store shot-col">
+        <img class="shot" src="/brevva/assets/shots/dictionary.webp" width="660" height="1434" loading="lazy" decoding="async"
+             alt="A picture from the App Store page, headed LEARNS YOUR WORDS. Your dictionary in the brevva keys app: counts for names, typed, spoken and fixes, then a list of words you say with how many times each was heard.">
+        <figcaption>From the App Store page: Your dictionary, in the app.</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -188,44 +211,50 @@
     <div class="wrap">
       <div class="intro">
         <p class="dots label">Where your words go</p>
-        <h2>What happens to what you say and type, item by item.</h2>
+        <h2>What happens to what you say and type.</h2>
+        <p>Speech, typing and tidying all happen on your iPhone. There is no account, no sign-in, no analytics and no server of ours. Here it is item by item.</p>
       </div>
-
       <table class="ledger">
         <caption>Everything brevva keys handles, where it is handled, and whether it leaves the iPhone.</caption>
         <thead><tr><th scope="col">What</th><th scope="col">Where it is handled</th><th scope="col">Leaves the iPhone</th></tr></thead>
         <tbody>
           <tr><th scope="row">Keys you tap or swipe</th><td data-h="Where">The keyboard, on the iPhone.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
-          <tr><th scope="row">Your voice, in the keyboard (2.1)</th><td data-h="Where">Apple’s on-device dictation model. The sound is not saved.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
-          <tr><th scope="row">Your voice, in the app (2.0, or when the keyboard cannot listen)</th><td data-h="Where">brevva’s speech model, on the iPhone. The recording is deleted once it is text.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
+          <tr><th scope="row">Your voice, in the keyboard</th><td data-h="Where">Apple’s on-device dictation model. The sound is not saved.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
+          <tr><th scope="row">Your voice, in the app</th><td data-h="Where">brevva’s speech model and Apple’s on-device speech recognition. The recording is deleted once it is text.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
           <tr><th scope="row">The tidy</th><td data-h="Where">brevva’s rules, then Apple Intelligence’s on-device model if your iPhone has it.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
-          <tr><th scope="row">What it learns</th><td data-h="Where">Your words and names, corrections you undo, where your thumbs land, and your last ten copied snippets. Kept in a folder the app and keyboard share, on the iPhone.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
+          <tr><th scope="row">What it learns</th><td data-h="Where">Your words, corrections you undo, where your thumbs land, words you dictate often, and your last ten copied snippets. Kept in a folder the app and keyboard share.</td><td data-h="Leaves the iPhone" class="stays">No</td></tr>
         </tbody>
       </table>
 
-      <div class="cols" style="margin-top:26px">
-        <div class="panel">
-          <h3>The only downloads</h3>
-          <ul>
-            <li>The first time you open the app, it downloads its voice files (about 600&nbsp;MB) from Hugging Face, which hosts the speech model. Like any download, that shows your IP address to Hugging Face. Nothing you say or type is part of it.</li>
-            <li>If Apple’s US English dictation model is not on your iPhone yet, the app asks iOS to fetch it from Apple.</li>
-            <li>Nothing is uploaded. No analytics, no ads, no tracking, no account, no server of ours.</li>
-          </ul>
+      <div class="split" style="margin-top:44px">
+        <figure class="store">
+          <img class="shot" src="/brevva/assets/shots/on-this-phone.webp" width="660" height="1434" loading="lazy" decoding="async"
+               alt="A picture from the App Store page, headed STAYS ON YOUR PHONE, with the line No account. Works offline. The brevva keys app's home screen reads READY, ON THIS PHONE, and at the bottom: Everything stays on this phone.">
+          <figcaption>From the App Store page: the app’s home screen.</figcaption>
+        </figure>
+        <div class="stack">
+          <div class="panel">
+            <h3>The only downloads</h3>
+            <ul>
+              <li>The first time you open the app, it downloads its voice files (about 600&nbsp;MB) from Hugging Face, which hosts the speech model. Like any download, that shows your IP address to Hugging Face. Nothing you say or type is part of it.</li>
+              <li>If Apple’s US English dictation model is not on your iPhone yet, the app asks iOS to fetch it from Apple.</li>
+              <li>Nothing is uploaded.</li>
+            </ul>
+          </div>
+          <div class="panel">
+            <h3>Why it asks for Full Access</h3>
+            <p>iOS warns that a keyboard with Full Access could send what you type over the network. brevva keys uses Full Access for three things on the phone: the microphone, the folder it shares with its app, and the clipboard, for your recent copies. The keyboard makes no network connections of its own.</p>
+            <p style="margin:0">Typing works with Full Access off. Dictation, learning your words and recent copies need it on.</p>
+          </div>
+          <div class="panel">
+            <h3>Check it yourself</h3>
+            <ul class="checks">
+              <li><span class="dots">Airplane mode</span>Once the voice files are in, turn on Airplane Mode and dictate. Nothing it does needs a server.</li>
+              <li><span class="dots">App Store label</span>The listing’s App Privacy section says <strong>Data Not Collected</strong>. The <a href="/brevva/privacy/">privacy policy</a> spells out what is kept on the phone.</li>
+              <li><span class="dots">Privacy report</span>iOS lists every domain an app contacts: <span class="path">Settings › Privacy &amp; Security › App Privacy Report</span>.</li>
+            </ul>
+          </div>
         </div>
-        <div class="panel">
-          <h3>Why it asks for Full Access</h3>
-          <p>iOS warns that a keyboard with Full Access could send what you type over the network. brevva keys uses it for two things: the microphone, and the folder it shares with its app. The keyboard has no code that sends anything over the network.</p>
-          <p style="margin:0">Typing works with Full Access off. Dictation and learning need it on.</p>
-        </div>
-      </div>
-
-      <div class="panel" style="margin-top:18px">
-        <h3>Check it yourself</h3>
-        <ul class="checks">
-          <li><span class="dots">Airplane mode</span>Once the voice files are in, turn on Airplane Mode and dictate. Nothing it does needs a server.</li>
-          <li><span class="dots">App Store label</span>The listing’s App Privacy section says <strong>Data Not Collected</strong>. The <a href="/brevva/privacy/">privacy policy</a> spells out what that covers.</li>
-          <li><span class="dots">Privacy report</span>iOS lists every domain an app contacts: <span class="path">Settings › Privacy &amp; Security › App Privacy Report</span>.</li>
-        </ul>
       </div>
     </div>
   </section>
@@ -282,8 +311,7 @@
       </div>
       <aside class="panel shot-col" aria-labelledby="who">
         <p class="dots label" id="who">Who makes it</p>
-        <p>Blue Tomato Studio, a small design house that also makes Slate for Mac, Hifz Quran and aloud. The App Store lists the developer as Muhammad Hossain, © Blue Tomato Studio LLC.</p>
-        <p>First released in April 2026. Version 2.0 came out on 9 November 2026; 2.1 is in testing.</p>
+        <p>Blue Tomato Studio LLC, a small design house that also makes Slate, Hifz Quran and aloud. The App Store lists the developer as Muhammad Hossain.</p>
         <p style="margin:0">Write to <a href="mailto:contact@bluetomatostudio.com">contact@bluetomatostudio.com</a>. Say which iPhone you have and the version number from the app’s Settings.</p>
       </aside>
     </div>
@@ -295,12 +323,12 @@
     <div class="wrap">
       <div class="display">
         <p class="dots label"><span class="lamp" aria-hidden="true"></span>Ready on this phone</p>
-        <h2>Say your next message, and keep it on your iPhone.</h2>
-        <p>iPhone with iOS 26.2 or later, US English. About 600&nbsp;MB of voice files on first open.</p>
+        <h2>brevva keys, for iPhone.</h2>
+        <p>iOS 26.2 or later, US English. About 600&nbsp;MB of voice files on first open.</p>
         <div class="cta-row">
-          <a class="key" href="https://apps.apple.com/app/id6761425575">Get brevva keys on the App Store</a>
-          <a class="quiet" href="https://testflight.apple.com/join/Bq4NWRvv">Try 2.1 on TestFlight</a>
+          <a class="key" href="https://apps.apple.com/app/id6761425575">Get it on the App Store</a>
           <a class="quiet" href="/brevva/privacy/">Privacy policy</a>
+          <a class="quiet" href="/brevva/support/">Support</a>
         </div>
       </div>
     </div>
@@ -322,6 +350,6 @@
   </div>
 </footer>
 
-<script src="/brevva/assets/display.js?v=1" defer></script>
+<script src="/brevva/assets/display.js?v=2" defer></script>
 </body>
 </html>

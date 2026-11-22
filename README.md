@@ -242,19 +242,52 @@ Policy links at these three addresses, so they must always exist:
 brevva/index.html           https://bluetomatostudio.com/brevva/
 brevva/privacy/index.html   https://bluetomatostudio.com/brevva/privacy/
 brevva/support/index.html   https://bluetomatostudio.com/brevva/support/
-brevva/assets/              brevva.css, display.js, the dot font, screenshots, og.png
+brevva/assets/              brevva.css, display.js, the dot font, og.png, icons
+brevva/assets/shots/        the pictures of the app (see below)
 ```
 
 They carry the app's own night look (colours from `BrevvaCore/.../Palette.swift`
-in the app repo) inside the studio's bar and footer. `dots.woff` is a font built
+in the app repo) inside the studio's bar and footer: near-black, one amber, dot
+letters for labels, mono type, square corners. No gradients and no soft glows;
+the only glow is the small LED lamps, as in the app. `dots.woff` is a font built
 from the app's `DotFont.swift` glyphs: capitals, digits and `: . - ' % / >` only.
 
-Things to change when they happen:
+### The pictures
 
-- **2.1 reaches the App Store.** Remove the "Version note" box on the brevva page,
-  drop "(2.1)" and "(2.0, or ...)" from the table under "Where your words go", and
-  update the "Who makes it" dates. The privacy policy covers both versions already.
+Every picture of the app is its own file in `brevva/assets/shots/`, so a new
+capture can replace one without touching the HTML:
+
+| File | What it is | Made from (app repo) |
+| --- | --- | --- |
+| `listening.webp` | the hero: the keyboard listening | `AppStore/2.1/raw/01_talk.png`, cropped to the keyboard (y 1671 to the bottom), 900 wide |
+| `in-place.webp` | How it works | `AppStore/2.1/pages/iphone69/02_inplace.png`, 660 wide |
+| `keys.webp` | Typing | `.../iphone69/06_keys.png`, 660 wide |
+| `dictionary.webp` | Your words | `.../iphone69/07_words.png`, 660 wide |
+| `on-this-phone.webp` | Where your words go | `.../iphone69/03_private.png`, 660 wide |
+
+To swap one: `cwebp -q 80 -resize 660 0 -metadata none new.png -o brevva/assets/shots/keys.webp`.
+If the new picture has a different shape, change the `width` and `height` on its
+`<img>` in `brevva/index.html` to match, and update its `alt` text to say what
+the new picture shows. The worked example in "The tidy" is drawn in HTML, not a
+picture; its two sentences are the real output of `DictationCleanup.polish`.
+
+`brevva/assets/og.png` (the sharing picture) is drawn with Pillow: the wordmark
+from `wordmark.svg`, the store caption "TALK. IT TYPES." in the dot font, one
+line of mono, and the listening panel cropped from `01_talk.png`. Flat black, no
+gradient.
+
+### Things to change when they happen
+
+- **2.1 reaches the App Store.** Nothing has to change: the pages describe
+  what each version does rather than what the store has today.
+- **Words learned from dictation can be deleted for good** (a 2.0 and 2.1 bug: they come
+  back after a delete). Remove the "known problem" lines in `brevva/privacy/`
+  (#delete, and the table row "Words you dictate") and `brevva/support/` (#words),
+  and update the privacy policy's "Last updated" date.
 - **Anything about data changes in the app** (a new download, a new thing kept on
   the phone, a new use of Full Access): update the table and the "Every network
-  connection" list in `brevva/privacy/index.html`, and its "Last updated" date.
+  connection" list in `brevva/privacy/index.html`, the ledger on the brevva page,
+  and the privacy policy's "Last updated" date.
+- **The listening panel or the mic key changes** (build 20): replace the pictures
+  above. The words on the pages do not say where the mic sits.
 - **CSS changes:** bump `brevva.css?v=` in all three pages.

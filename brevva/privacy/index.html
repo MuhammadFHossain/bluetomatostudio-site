@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Privacy policy · brevva keys · Blue Tomato Studio</title>
-<meta name="description" content="What brevva keys does with what you type and say: it is handled on your iPhone and not collected. The full list of what is stored on the phone, what Full Access is for, and the one download.">
+<meta name="description" content="What brevva keys does with what you type and say: it is handled on your iPhone and not collected. What is kept on the phone, what Full Access is for, and the only downloads.">
 <link rel="canonical" href="https://bluetomatostudio.com/brevva/privacy/">
 <meta name="theme-color" content="#0A0A0A">
 <link rel="icon" type="image/png" sizes="64x64" href="/brevva/assets/favicon-64.png">
@@ -12,14 +12,14 @@
 <meta property="og:type" content="article">
 <meta property="og:site_name" content="Blue Tomato Studio">
 <meta property="og:title" content="brevva keys privacy policy">
-<meta property="og:description" content="What you type and say is handled on your iPhone and not collected. The full list of what stays on the phone, what Full Access is for, and the one download.">
+<meta property="og:description" content="What you type and say is handled on your iPhone and not collected. What is kept on the phone, what Full Access is for, and the only downloads.">
 <meta property="og:url" content="https://bluetomatostudio.com/brevva/privacy/">
 <meta property="og:image" content="https://bluetomatostudio.com/brevva/assets/og.png">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preload" href="/brevva/assets/dots.woff?v=1" as="font" type="font/woff" crossorigin>
-<link rel="stylesheet" href="/brevva/assets/brevva.css?v=1">
+<link rel="stylesheet" href="/brevva/assets/brevva.css?v=2">
 </head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
@@ -42,15 +42,15 @@
   <div class="wrap">
     <p class="dots label"><span class="lamp" aria-hidden="true"></span>Privacy</p>
     <h1>brevva keys privacy policy</h1>
-    <p class="updated">Last updated 21 November 2026. Covers the brevva keys app and its keyboard for iPhone, versions 2.0 and 2.1. The app used to be called brevva notes.</p>
+    <p class="updated">Last updated 22 November 2026. Covers the brevva keys app and its keyboard for iPhone, versions 2.0 and 2.1.</p>
 
     <div class="display summary">
       <p class="dots label" style="font-size:17px">In short</p>
       <ul>
         <li>What you type and what you say is handled on your iPhone. We do not collect it, see it or share it.</li>
-        <li>There is no account, no sign-in, no analytics, no ads and no server of ours.</li>
+        <li>There is no account, no sign-in, no analytics, no tracking and no server of ours.</li>
         <li>The app downloads its voice files once, from Hugging Face. Nothing you say or type is sent.</li>
-        <li>Full Access is used for the microphone and for a folder the app and keyboard share on the phone. Nothing else.</li>
+        <li>Full Access is used for the microphone, a folder the app and keyboard share on the phone, and your recent copies. Nothing else.</li>
       </ul>
     </div>
 
@@ -74,45 +74,53 @@
     <p>brevva keys is made by Blue Tomato Studio LLC. On the App Store the developer is listed as Muhammad Hossain. You can reach us at <a href="mailto:contact@bluetomatostudio.com">contact@bluetomatostudio.com</a>.</p>
 
     <h2 id="typing">What you type</h2>
-    <p>The keyboard reads the keys you tap and the shapes you swipe so it can show the letter, suggest words and fix slips. All of that happens on your iPhone. The keyboard contains no code that sends anything over the network.</p>
+    <p>The keyboard reads the keys you tap and the shapes you swipe so it can show the letter, suggest words and fix slips. All of that happens on your iPhone. The keyboard makes no network connections of its own.</p>
     <p>To get better at your typing, it remembers some things on your iPhone: the words you keep, corrections you undo, which words tend to follow which, and where your thumbs tend to land on each key. The full list is <a href="#stored">below</a>.</p>
-    <p>It also keeps your last ten copied snippets (each under 500 characters) so you can paste them again from the bar above the keys. It reads the clipboard only when something new has been copied.</p>
+    <p>With Full Access on, it also keeps your last ten copied snippets so you can paste them again from the bar above the keys. It looks at the clipboard when the keyboard opens, and only if something new was copied. It keeps any copied text of 500 characters or less. That can include a code or a password you copied in another app, so it is worth knowing it is there. It stays on your iPhone.</p>
 
     <h2 id="voice">What you say</h2>
     <h3>In the keyboard (version 2.1)</h3>
-    <p>When you tap the mic, the keyboard listens through iOS, using the microphone permission you gave the brevva keys app. The sound goes straight to Apple’s dictation model on your iPhone and is turned into text as you speak. It is not saved to a file and it is not sent anywhere.</p>
+    <p>When you tap the mic, the keyboard listens through WebKit, the part of iOS that shows web pages, under the microphone permission you gave the brevva keys app. The page it uses is built into the keyboard and loads nothing from the internet. The sound goes straight to Apple’s dictation model on your iPhone and is turned into text as you speak. It is not saved to a file and it is not sent anywhere.</p>
+    <p>If Apple’s dictation model is not on your iPhone, the keyboard does not fall back to a server. It hands over to the app, as described next.</p>
     <h3>In the app (version 2.0, and 2.1 when the keyboard cannot listen)</h3>
-    <p>The mic key opens the brevva keys app. Your voice is recorded to a temporary file on your iPhone, turned into text by a speech model on your iPhone, and the recording is deleted. To get the words back to where you were typing, the app puts them in the folder it shares with the keyboard and on your clipboard. If you use Universal Clipboard, iOS may make that clipboard available on your other Apple devices, as it does for anything you copy.</p>
-    <p>The app learns words you say often, such as names, so it can spell them right next time. That list stays on your iPhone and you can see it under Your dictionary in the app.</p>
+    <p>The mic key opens the brevva keys app. The Action Button and Siri start here too. Your voice is recorded to a temporary file on your iPhone. While you talk, Apple’s speech recognition shows the words on screen, set to work on the iPhone only. brevva’s own speech model, also on the iPhone, then turns the recording into the final text, and the recording is deleted.</p>
+    <p>To get the words back to where you were typing, the app puts them in the folder it shares with the keyboard and on your clipboard. If you use Universal Clipboard, iOS may make that clipboard available on your other Apple devices, as it does for anything you copy.</p>
+    <p>If you start it by asking Siri, Siri handles that request the way it handles any other. brevva keys starts listening after that.</p>
+    <h3>Words you dictate</h3>
+    <p>The app counts the words you dictate (those longer than three letters) so it can suggest them while you type. Words you dictate in the keyboard wait in the shared folder, up to the last 50 dictations, until you next open the app; it counts them and clears them. The counts stay on your iPhone and are listed under Your dictionary in the app. This counting happens even when <em>Save words you type</em> is off.</p>
 
     <h2 id="tidy">Tidying your words</h2>
-    <p>Dictated text is first tidied by brevva’s own rules on your iPhone: filler words out, repeats and false starts removed, your correction kept. If your iPhone has Apple Intelligence turned on, Apple’s on-device language model then gives it a second tidy. brevva keys only uses Apple’s on-device model for this. It does not use Private Cloud Compute or any other online service.</p>
+    <p>Dictated text is first tidied by brevva’s own rules on your iPhone: filler words out, repeats and false starts removed, your correction kept. If your iPhone has Apple Intelligence turned on, Apple’s on-device language model then gives it a second tidy. The model is given only the text and a short list of words to spell right. brevva keys only uses Apple’s on-device model for this. It does not use Private Cloud Compute or any other online service.</p>
 
     <h2 id="stored">What stays on your iPhone</h2>
-    <p>These are kept in the app’s storage and in an App Group, a folder on your iPhone that only the brevva keys app and its keyboard can open. None of it is sent anywhere.</p>
+    <p>These are kept in the app’s storage and in an App Group, a folder on your iPhone that only the brevva keys app and its keyboard can open. None of it is sent anywhere by brevva keys. Like other apps’ data, iOS can include it in your iPhone’s own backups.</p>
     <table class="store-table">
       <thead><tr><th scope="col">What</th><th scope="col">Why</th><th scope="col">How to remove it</th></tr></thead>
       <tbody>
-        <tr><th scope="row">Words you type and keep</th><td data-h="Why">So autocorrect leaves them alone and suggests them.</td><td data-h="Remove">Swipe to delete one in Your dictionary, or Settings › Your words › Delete saved words.</td></tr>
-        <tr><th scope="row">Corrections you undo, and word pairs</th><td data-h="Why">So it does not make the same change twice, and suggests your next word.</td><td data-h="Remove">Delete saved words.</td></tr>
+        <tr><th scope="row">Words you type and keep</th><td data-h="Why">So autocorrect leaves them alone and suggests them.</td><td data-h="Remove">Swipe one away in Your dictionary, or Settings › Your words › Delete saved words.</td></tr>
+        <tr><th scope="row">Corrections you undo, and which words follow which</th><td data-h="Why">So it does not make the same change twice, and can suggest your next word.</td><td data-h="Remove">Delete saved words.</td></tr>
         <tr><th scope="row">Where your thumbs land on each key</th><td data-h="Why">So taps near the edge of a key go to the key you meant.</td><td data-h="Remove">Settings › Your words › Forget how you tap.</td></tr>
-        <tr><th scope="row">Words and names you say often</th><td data-h="Why">So dictation spells them your way.</td><td data-h="Remove">Swipe to delete one in Your dictionary. Deleting the app removes them all.</td></tr>
-        <tr><th scope="row">Your last ten copied snippets</th><td data-h="Why">So you can paste them again from the bar.</td><td data-h="Remove">Newer copies replace older ones. Deleting the app removes them.</td></tr>
+        <tr><th scope="row">Words you dictate, with counts</th><td data-h="Why">So they are suggested when you type.</td><td data-h="Remove">Deleting the app. See <a href="#delete">the note below</a> about deleting them inside the app.</td></tr>
+        <tr><th scope="row">Dictations from the keyboard, waiting for the app</th><td data-h="Why">So the app can count their words.</td><td data-h="Remove">Cleared the next time you open the app.</td></tr>
+        <tr><th scope="row">Your last ten copied snippets</th><td data-h="Why">So you can paste them again from the bar.</td><td data-h="Remove">Newer copies push older ones out. Deleting the app removes them.</td></tr>
         <tr><th scope="row">The last dictation handed to the keyboard</th><td data-h="Why">So the words reach the app you were typing in.</td><td data-h="Remove">Replaced by the next dictation.</td></tr>
         <tr><th scope="row">Recent emoji and your settings</th><td data-h="Why">So the keyboard behaves the way you set it.</td><td data-h="Remove">Deleting the app.</td></tr>
-        <tr><th scope="row">A timing log</th><td data-h="Why">How long the keyboard took to respond, so slow spots can be found. It holds timings, not your letters.</td><td data-h="Remove">It starts over at 2 MB. Deleting the app removes it.</td></tr>
+        <tr><th scope="row">A timing log</th><td data-h="Why">How long the keyboard took to respond, so slow spots can be found. It holds timings, not your letters.</td><td data-h="Remove">It starts over past 2&nbsp;MB. Deleting the app removes it.</td></tr>
+        <tr><th scope="row">A short list of dictation events</th><td data-h="Why">Lines such as “fell back to the app” or how many characters were added, to help with problems. No words.</td><td data-h="Remove">Keeps the last 20. Deleting the app removes it.</td></tr>
         <tr><th scope="row">The voice files</th><td data-h="Why">The speech model the app uses.</td><td data-h="Remove">Deleting the app.</td></tr>
       </tbody>
     </table>
     <p style="margin-top:16px">Turning off <em>Save words you type</em> in the app’s settings stops the keyboard saving anything new about your typing.</p>
+    <p>The app also has developer tools, hidden until you tap the version number in Settings five times. One of them, <em>Log taps for replay</em>, is off unless you turn it on. While it is on, the timing log also records the keys you tap and the words you finish, so typing can be replayed to tune autocorrect. That log stays on your iPhone too. Turn the switch off in the same place.</p>
 
     <h2 id="full-access">Allow Full Access</h2>
-    <p>iOS asks you to turn on Allow Full Access for some keyboards, and warns that a keyboard with Full Access can send what you type over the network. brevva keys does not use it that way. It uses Full Access for two things:</p>
+    <p>iOS asks you to turn on Allow Full Access for some keyboards, and warns that a keyboard with Full Access can send what you type over the network. brevva keys does not use it that way. It uses Full Access for three things:</p>
     <ul>
       <li><strong>The microphone</strong>, so the keyboard can listen when you tap the mic (version 2.1).</li>
-      <li><strong>The shared folder</strong>, so the words it learns are kept, and your dictated words and learned names can pass between the app and the keyboard.</li>
+      <li><strong>The shared folder</strong>, so the words it learns are kept, and your settings and dictated words can pass between the app and the keyboard.</li>
+      <li><strong>The clipboard</strong>, so new copies can be offered again in the bar above the keys.</li>
     </ul>
-    <p>The keyboard types without Full Access. Dictation and learning need it.</p>
+    <p>The keyboard types without Full Access. Dictation, learning your words and recent copies need it.</p>
 
     <h2 id="network">Every network connection</h2>
     <p>This is the complete list of times brevva keys uses the internet.</p>
@@ -121,13 +129,15 @@
       <li><strong>Apple’s dictation model, if it is not on your iPhone yet.</strong> The app asks iOS to fetch Apple’s US English dictation model. iOS downloads it from Apple.</li>
       <li><strong>Links you tap.</strong> “Rate brevva keys” opens the App Store. Emailing us opens your mail app.</li>
     </ul>
-    <p>There is nothing else: no analytics, no crash-reporting service, no advertising, no tracking and no server of ours.</p>
+    <p>There is nothing else: no analytics, no crash-reporting service, no tracking and no server of ours. The keyboard itself makes no network connections.</p>
 
     <h2 id="collect">What we collect</h2>
     <p>Nothing. We cannot see what you type or say, or what the app has learned. If you have turned on <em>Share With App Developers</em> in your iPhone’s settings, Apple may pass us anonymous crash reports and usage figures for the app; that is Apple’s system, and brevva keys adds nothing to it. If you email us, we see only what you send.</p>
 
     <h2 id="delete">Deleting what it learned</h2>
-    <p>Open brevva keys, then Settings, Your words. <em>Delete saved words</em> clears what the keyboard learned from your typing, and <em>Forget how you tap</em> clears where your thumbs land. Single words can be swiped away in Your dictionary. Deleting the app deletes everything on this page from your iPhone.</p>
+    <p>Open brevva keys, then Settings, Your words. <em>Delete saved words</em> clears what the keyboard learned from your typing, the corrections it remembers and how you tap. <em>Forget how you tap</em> clears only where your thumbs land. Single words can be swiped away in Your dictionary.</p>
+    <p><strong>A known problem in versions 2.0 and 2.1:</strong> words learned from dictation can come back after you delete them inside the app, the next time the app learns from a dictation. Deleting the app removes them for good. We will change this page when that is fixed.</p>
+    <p>Deleting the app deletes everything on this page from your iPhone.</p>
 
     <h2 id="children">Children</h2>
     <p>brevva keys is not aimed at children and collects nothing from anyone.</p>
